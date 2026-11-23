@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kim Sohee · Dong-Ah Institute of Media and Arts</title>
+<meta name="description" content="Kim Sohee, Ph.D. — Assistant Professor, Department of Fashion Styling, Dong-Ah Institute of Media and Arts. Education, professional experience, research (conference presentations and publications), exhibitions and projects, courses taught.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;500&display=swap">
+<style>
+@font-face{font-family:'S-Core Dream';font-weight:300;src:local('S-Core Dream 3 Light'),local('SCDream3'),url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');font-display:swap}
+@font-face{font-family:'S-Core Dream';font-weight:500;src:local('S-Core Dream 5 Medium'),local('SCDream5'),url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');font-display:swap}
+:root{
+ color-scheme:dark;
+ /* DIMA brand colors (dima.ac.kr): navy #141426 · pink #D1047C · gradient pink #FF5EBC → periwinkle #7578FF · logo magenta #EC268F · beige #CFAE94 */
+ --ink:#141426;--ink2:#1B1B32;--ink3:#2F2F48;--band:#A61C64;
+ --pink:#D1047C;--hot:#FF5EBC;--peri:#7578FF;--peri2:#B4B6FF;--beige:#CFAE94;--rose:#FFB3DE;
+ --fg:#F5F5FA;--mute:#B8B8CD;--line:#2F2F48;
+ --en:'Bebas Neue','Oswald','Arial Narrow',sans-serif;
+ --ko:'S-Core Dream','Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+ --gut:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--ko);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+b,strong{font-weight:500;color:var(--fg)}
+button{font-family:var(--en)}
+.en{font-family:var(--en);font-weight:400;letter-spacing:1.5px;text-transform:uppercase}
+#bar{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--peri),var(--hot));z-index:40;transition:width .25s ease}
+
+/* ---------- cover ---------- */
+.cover{position:relative;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;align-items:center}
+.pw{position:absolute;inset:0;pointer-events:none;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.orb{position:absolute;border-radius:50%;pointer-events:none}
+.orb.o1{width:760px;height:760px;right:-240px;top:-260px;background:radial-gradient(circle at 35% 35%,#3B2B86,#1A1A38 70%);opacity:.85}
+.orb.o2{width:340px;height:340px;right:120px;bottom:-170px;border:2px solid var(--pink);opacity:.45}
+.orb.o3{width:180px;height:180px;left:-60px;bottom:80px;background:var(--beige);opacity:.10}
+.cover.active .orb.o1{animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-30px,24px) scale(1.04)}}
+.cover .cw{position:relative;z-index:1;width:100%;max-width:1400px;margin:0 auto;padding:96px var(--gut) 110px;display:grid;grid-template-columns:minmax(0,1fr) 400px;align-items:center;gap:30px 40px}
+.cover .ct{grid-column:1;grid-row:1}
+.cover .tagarea{grid-column:2;grid-row:1;align-self:stretch;min-height:1px;pointer-events:none}
+.cover .t1{font-family:var(--en);font-size:clamp(16px,2vw,26px);letter-spacing:6px;color:var(--peri2);text-transform:uppercase;margin:0 0 18px}
+.cover h1{margin:0;font-family:var(--en);font-weight:400;font-size:clamp(64px,12.5vw,160px);line-height:.9;letter-spacing:2px;text-transform:uppercase;color:var(--fg);white-space:nowrap}
+.cover h1 em{font-style:normal;color:var(--hot)}
+.cover h1 .ln{display:block;overflow:hidden;padding-top:.06em;margin-top:-.06em}
+.cover h1 .ln>span{display:inline-block}
+.nb{white-space:nowrap}
+.cover .role{font-size:clamp(18px,2.2vw,26px);font-weight:500;line-height:1.5;margin:26px 0 8px;text-align:left}
+.cover .lab{font-family:var(--en);font-size:clamp(15px,1.6vw,20px);letter-spacing:3px;line-height:1.7;color:var(--peri2);text-transform:uppercase}
+.cover .meta{display:flex;flex-wrap:wrap;gap:18px 48px;margin-top:34px;font-family:var(--en);font-size:20px;letter-spacing:3px;color:var(--mute);text-transform:uppercase}
+.cover .meta b{display:block;color:var(--fg);font-weight:400;font-size:28px;letter-spacing:2px;margin-top:2px}
+.cover .meta b.lc{font-family:var(--ko);font-weight:500;font-size:19px;letter-spacing:0;text-transform:none;margin-top:6px;display:flex;align-items:center;gap:12px}
+.cover .meta b.lc a{border-bottom:1px solid var(--pink)}
+.cover .meta b.lc a:hover{color:var(--rose)}
+.copy{font-family:var(--en);font-size:14px;letter-spacing:2px;color:var(--peri2);background:transparent;border:1px solid var(--peri);border-radius:999px;padding:3px 10px;cursor:pointer;transition:background .2s,color .2s}
+.copy:hover{background:var(--peri);color:#fff}
+.menu{margin-top:38px}
+.menu .ml{font-family:var(--en);font-size:18px;letter-spacing:4px;color:var(--peri2);text-transform:uppercase;margin:0 0 4px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.menu ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));column-gap:44px}
+.menu li{border-bottom:1px dashed var(--line)}
+.menu li a.m{display:flex;align-items:baseline;gap:16px;padding:12px 0;font-family:var(--en);font-size:26px;letter-spacing:2px;color:var(--fg);text-transform:uppercase;line-height:1.1;position:relative;transition:color .25s,padding-left .3s}
+.menu li a .no{font-size:18px;color:var(--peri);width:30px;flex:none;transition:color .25s}
+.menu li a .lb{flex:1;min-width:0}
+.menu li a.m:before{content:"";position:absolute;left:0;top:50%;height:2px;width:0;background:var(--hot);transform:translateY(-50%);transition:width .3s}
+.menu li a.m:hover,.menu li a.m:focus-visible{color:var(--hot);padding-left:22px;outline:none}
+.menu li a.m:hover .no,.menu li a.m:focus-visible .no{color:var(--hot)}
+.menu li a.m:hover:before,.menu li a.m:focus-visible:before{width:12px}
+.menu .subs{display:flex;flex-wrap:wrap;gap:6px 18px;padding:0 0 12px 46px;margin-top:-4px}
+.menu .subs a{font-family:var(--en);font-size:16px;letter-spacing:2px;color:var(--peri2);text-transform:uppercase;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.menu .subs a:hover,.menu .subs a:focus-visible{color:var(--hot);border-color:var(--hot);outline:none}
+.cover .cue{position:absolute;left:var(--gut);bottom:26px;z-index:1;font-family:var(--en);font-size:16px;letter-spacing:3px;color:var(--mute);opacity:.7;text-transform:uppercase}
+
+/* ---------- hang tag on a tailor's tape (cover) ---------- */
+.cover{--paper:#F3F0E8;--inkd:#1A1A2E}
+#tape{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;pointer-events:none}
+#tagwrap{position:absolute;left:0;top:0;z-index:4;width:0;height:0;will-change:transform}
+#tag{position:absolute;left:-170px;top:-14px;width:340px;height:540px;perspective:1200px;transform-origin:50% 0;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;outline:none}
+#tag.grab{cursor:grabbing}
+#tag:focus-visible .tg-face{box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 3px var(--peri)}
+.tg-card{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}
+.tg-face{position:absolute;inset:0;border-radius:18px;background:var(--paper);color:var(--inkd);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45),0 2px 0 rgba(255,255,255,.35) inset;overflow:hidden;font-family:var(--ko);font-weight:300;line-height:1.5}
+.tg-face:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.55),transparent 50%),repeating-linear-gradient(0deg,rgba(0,0,0,.018) 0 1px,transparent 1px 3px);pointer-events:none}
+.tg-face b,.tg-face strong{color:var(--inkd)}
+.tg-back{transform:rotateY(180deg)}
+.tg-eyelet{position:absolute;left:50%;top:14px;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0,#cfd0d8 20%,#6f7180 55%,#2e2f3a 100%);box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.tg-eyelet:after{content:"";position:absolute;inset:7px;border-radius:50%;background:#141426;box-shadow:inset 0 2px 4px rgba(0,0,0,.8)}
+.tg-string{position:absolute;left:50%;top:-16px;width:3px;height:45px;margin-left:-1.5px;border-radius:2px;background:#E9E6F6;box-shadow:1px 0 1px rgba(0,0,0,.35);z-index:3;pointer-events:none}
+.tg-photo{position:absolute;left:32px;right:32px;top:84px;height:304px;border-radius:10px;overflow:hidden;background:#ddd}
+.tg-stitch{position:absolute;inset:8px;border:1.5px dashed #c9b8a0;border-radius:13px;pointer-events:none}
+.tg-stitch.s2{inset:12px;border-radius:10px;opacity:.7}
+.tg-woven{position:absolute;left:50%;top:50px;transform:translateX(-50%);height:24px;padding:0 10px;display:flex;align-items:center;gap:8px;white-space:nowrap;background:linear-gradient(180deg,#1B1B32,#2E2E52 45%,#1B1B32);box-shadow:0 1px 2px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.08);font-family:var(--en);font-size:10.5px;letter-spacing:3px;color:#F5F5FA;text-transform:uppercase}
+.tg-woven:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 3px);pointer-events:none}
+.tg-woven i{display:block;width:3px;height:14px;border-left:1.5px dashed #e9e6f6;opacity:.9}
+.tg-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;display:block;filter:saturate(.95)}
+.tg-name{position:absolute;left:32px;top:400px;font-family:var(--en);font-size:38px;line-height:.9;letter-spacing:1px;color:var(--inkd);text-transform:uppercase}
+.tg-name em{font-style:normal;color:var(--pink)}
+.tg-role{position:absolute;left:32px;right:32px;top:442px;font-size:11.5px;line-height:1.5;font-weight:500;color:#3a3a4e;text-align:left}
+.tg-role span{display:block;font-weight:300;color:#6a6a7e}
+.tg-foot{position:absolute;left:32px;right:32px;bottom:16px;display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--en);font-size:12px;letter-spacing:2.5px;color:#7a7a8e;text-transform:uppercase;line-height:1.2}
+.tg-foot>div{white-space:nowrap}
+.tg-bar{height:6px;width:86px;background:linear-gradient(90deg,var(--pink),var(--peri));border-radius:3px;margin-bottom:4px}
+.tg-src{font-size:10px;letter-spacing:2px;color:#9a9aae}
+.tg-lab{position:absolute;left:22px;right:22px;top:60px;font-family:var(--en);font-size:15px;letter-spacing:4px;color:#7a7a8e;text-transform:uppercase}
+.tg-nm{position:absolute;left:32px;right:32px;top:84px;font-family:var(--en);font-size:30px;letter-spacing:1px;color:var(--inkd);line-height:.9;text-transform:uppercase}
+.tg-nm small{display:block;font-family:var(--ko);font-weight:500;font-size:11px;letter-spacing:0;color:#6a6a7e;margin-top:8px;line-height:1.45;text-transform:none}
+.tg-care{position:absolute;left:32px;right:32px;top:236px;gap:20px;border:1.5px solid var(--inkd);border-radius:8px;padding:12px 14px;display:grid;gap:12px}
+.tg-care a,.tg-care .tg-row{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:center;color:var(--inkd);text-decoration:none;font-size:11.5px;font-weight:500;line-height:1.35}
+.tg-care small{display:block;font-family:var(--en);font-size:10px;letter-spacing:2px;color:#7a7a8e;font-weight:400;text-transform:uppercase}
+.tg-care svg{width:30px;height:30px;stroke:var(--inkd);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tg-care a:hover{color:var(--pink)}
+.tg-care a:hover svg{stroke:var(--pink)}
+.tg-comp{position:absolute;left:22px;right:22px;top:336px;font-family:var(--en);font-size:12px;letter-spacing:2px;color:#7a7a8e;line-height:1.6;text-transform:uppercase}
+.tg-comp b{display:block;font-weight:400;color:var(--inkd);font-size:14px;letter-spacing:2px}
+.thint{position:absolute;z-index:4;top:0;font-family:var(--en);font-size:15px;letter-spacing:3px;color:var(--mute);text-transform:uppercase;white-space:nowrap;pointer-events:none}
+@media(min-width:861px) and (max-height:820px){
+ .cover .cw{padding:64px var(--gut) 90px}
+ .cover h1{font-size:clamp(64px,11vw,128px)}
+ .cover .meta{margin-top:24px}
+ .menu{margin-top:26px}
+ .menu li a.m{padding:9px 0;font-size:23px}
+}
+
+/* ---------- sections ---------- */
+.sec{position:relative}
+.sec:last-of-type{min-height:100vh}
+.band{position:sticky;top:0;z-index:5;height:92px;background:var(--band)}
+.band:after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--peri),var(--hot))}
+.band .bi{max-width:1240px;height:100%;margin:0 auto;padding:0 var(--gut);display:flex;align-items:center;gap:22px}
+.band .tag{white-space:nowrap;font-family:var(--en);font-size:22px;letter-spacing:3px;color:var(--peri2);font-weight:400;text-transform:uppercase}
+.band h2{font-family:var(--en);font-weight:400;font-size:clamp(28px,5.5vw,52px);letter-spacing:1.5px;margin:0;line-height:1;color:#fff;text-transform:uppercase;white-space:nowrap}
+.band h2 em{font-style:normal;color:var(--rose)}
+.band .pg{white-space:nowrap;margin-left:auto;font-family:var(--en);font-size:22px;letter-spacing:2px;color:var(--peri2);opacity:.85}
+.body{position:relative;max-width:1240px;margin:0 auto;padding:36px var(--gut) 80px}
+.bignum{position:absolute;right:calc(var(--gut) - 30px);top:10px;z-index:0;font-family:var(--en);font-size:200px;line-height:.8;color:transparent;-webkit-text-stroke:2px var(--peri);opacity:.14;pointer-events:none;user-select:none}
+.body>*:not(.bignum){position:relative;z-index:1}
+.sub{margin:34px 0 4px;padding-bottom:10px;border-bottom:2px solid var(--peri);font-family:var(--en);font-weight:400;font-size:26px;letter-spacing:3px;color:var(--peri2);text-transform:uppercase}
+.sub:first-child{margin-top:4px}
+.sub2{margin:24px 0 2px;font-family:var(--en);font-weight:400;font-size:19px;letter-spacing:3px;color:var(--mute);text-transform:uppercase}
+.sub + .sub2{margin-top:12px}
+.grp{scroll-margin-top:112px}
+.grp + .grp{margin-top:48px}
+.tl{display:grid;gap:0}
+.tl .row{position:relative;display:grid;grid-template-columns:190px 1fr;gap:26px;padding:17px 0;border-bottom:1px dashed var(--line);transition:background .3s}
+.tl .row:before{content:"";position:absolute;left:-22px;top:20px;bottom:20px;width:3px;background:var(--hot);transform:scaleY(0);transform-origin:top;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.tl .row:hover{background:linear-gradient(90deg,rgba(117,120,255,.09),transparent 65%)}
+.tl .row:hover:before{transform:scaleY(1)}
+.tl .yr{font-family:var(--en);font-size:32px;line-height:1;color:var(--hot);white-space:nowrap;padding-top:4px;transition:color .25s}
+.tl .row:hover .yr{color:var(--rose)}
+.tl .e p{margin:0;word-break:keep-all}
+.tl .t{font-size:19px;line-height:1.6;color:var(--fg)}
+.tl .v{font-size:16px;line-height:1.6;color:var(--mute);margin-top:4px}
+.tl .au{font-size:15.5px;line-height:1.6;color:var(--mute);margin-top:3px}
+.cor{color:var(--fg);font-weight:500}
+.legend{margin:0 0 -26px;text-align:right;font-family:var(--en);font-size:15px;letter-spacing:2px;color:var(--mute);text-transform:uppercase}
+.tl .au b{font-weight:500;color:var(--fg)}
+.ix{display:inline-block;margin-left:10px;vertical-align:1px;font-family:var(--en);font-size:12px;letter-spacing:2px;line-height:1.2;padding:2px 8px;border-radius:999px;border:1px solid var(--peri);color:var(--peri2)}
+.ix.sc{border-color:var(--hot);color:var(--hot)}
+.aw{display:inline-block;margin-left:10px;font-family:var(--en);font-size:15px;letter-spacing:2px;color:var(--hot);text-transform:uppercase;line-height:1.2;vertical-align:1px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:26px 28px}
+.panel.hot{background:var(--ink3);border-color:var(--peri)}
+.panel h4{margin:0 0 12px;font-family:var(--en);font-weight:400;font-size:32px;letter-spacing:1.5px;color:var(--fg);text-transform:uppercase}
+.panel p{margin:0;font-size:19px;line-height:1.75;word-break:keep-all}
+.panel.about{margin-top:26px}
+.cl{list-style:none;margin:0;padding:0}
+.cl li{display:grid;grid-template-columns:44px 1fr;align-items:baseline;gap:8px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:19px}
+.cl li:last-child{border-bottom:0}
+.cl .n{font-family:var(--en);font-size:26px;letter-spacing:1px;color:var(--peri);line-height:1}
+.none{display:none;color:var(--mute);font-size:17px;margin:8px 0 0}
+.sec.empty .none{display:block}
+.off{display:none!important}
+
+/* ---------- search / overview / hud ---------- */
+#search{position:fixed;left:50%;top:18px;transform:translate(-50%,-140%);z-index:45;width:min(560px,calc(100% - 32px));display:flex;gap:8px;align-items:center;background:rgba(20,20,38,.92);border:1px solid var(--peri);border-radius:14px;padding:10px 12px;backdrop-filter:blur(8px);transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .3s;opacity:0}
+#search.on{transform:translate(-50%,0);opacity:1}
+#search .sl{font-family:var(--en);font-size:16px;letter-spacing:3px;color:var(--peri2);white-space:nowrap;padding:0 6px}
+#search input{flex:1;min-width:0;font-family:var(--ko);font-weight:300;font-size:17px;color:var(--fg);background:transparent;border:0;outline:none;padding:6px 4px}
+#search input::placeholder{color:var(--mute)}
+#search button{font-size:14px;letter-spacing:2px;background:transparent;color:var(--fg);border:1px solid var(--pink);border-radius:8px;padding:6px 10px;cursor:pointer}
+#hud{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;gap:8px}
+#hud button{font-size:16px;letter-spacing:2px;background:rgba(20,20,38,.85);color:var(--fg);border:1px solid var(--pink);border-radius:8px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);transition:background .2s}
+#hud button:hover{background:var(--pink)}
+#hud button:focus-visible,#overview button:focus-visible,#search button:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+#overview{position:fixed;inset:0;background:rgba(14,14,28,.96);z-index:50;overflow:auto;padding:36px max(24px,env(safe-area-inset-right,0px)) 36px max(24px,env(safe-area-inset-left,0px));display:none}
+#overview.on{display:block}
+#overview h3{font-family:var(--en);font-weight:400;letter-spacing:3px;color:var(--peri2);font-size:24px;margin:0 0 18px;text-transform:uppercase;display:flex;align-items:center}
+#overview h3 small{margin-left:auto}
+#overview h3 small button{font-size:14px;letter-spacing:2px;background:transparent;color:var(--fg);border:1px solid var(--pink);border-radius:8px;padding:6px 12px;cursor:pointer}
+#overview .og{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+#overview .oi{background:var(--ink2);border:1px solid var(--line);border-radius:12px;transition:border-color .2s,transform .2s}
+#overview .oi:hover{border-color:var(--peri);transform:translateY(-3px)}
+#overview .oi.cur{border-color:var(--hot)}
+#overview .oi .main{width:100%;text-align:left;background:transparent;border:0;color:var(--fg);padding:16px 18px;cursor:pointer;font-family:var(--en);font-size:22px;letter-spacing:2px;text-transform:uppercase;line-height:1.2}
+#overview .oi .main .no{display:block;color:var(--peri2);font-size:15px;margin-bottom:4px}
+#overview .oi .subs{display:flex;flex-wrap:wrap;gap:6px 10px;padding:0 18px 14px}
+#overview .oi .subs button{background:transparent;border:1px solid var(--peri);border-radius:999px;color:var(--peri2);font-family:var(--en);font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;cursor:pointer;transition:background .2s,color .2s}
+#overview .oi .subs button:hover{background:var(--peri);color:#fff}
+footer{border-top:1px solid var(--line);padding:38px var(--gut) 90px;text-align:center;font-family:var(--en);font-size:16px;letter-spacing:3px;color:var(--mute);text-transform:uppercase;line-height:2}
+footer b{font-weight:400;color:var(--fg)}
+footer .m{font-family:var(--ko);font-weight:300;letter-spacing:0;text-transform:none;font-size:15px}
+footer .dl{display:inline-block;margin-top:10px;color:var(--peri2);border:1px solid var(--peri);border-radius:999px;padding:2px 14px;font-size:14px;letter-spacing:2px;transition:background .2s,color .2s}
+footer .dl:hover{background:var(--peri);color:#fff}
+
+/* ---------- motion (only when JS is running) ---------- */
+.js .a{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--dl,0s)}
+.js .a.on{opacity:1;transform:none}
+.js .band h2{clip-path:inset(0 100% 0 0);transition:clip-path .9s cubic-bezier(.6,.1,.2,1) .1s}
+.js .sec.active .band h2{clip-path:inset(0 0 0 0)}
+.js .band .tag{opacity:0;transform:translateX(-14px);transition:opacity .5s ease .05s,transform .5s ease .05s}
+.js .sec.active .band .tag{opacity:1;transform:none}
+.js .band:after{transition:width 1.1s cubic-bezier(.6,.1,.2,1) .2s}
+.js .sec.active .band:after{width:100%}
+.js .bignum{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s cubic-bezier(.6,.1,.2,1) .1s}
+.js .sec.active .bignum{clip-path:inset(0 0 0 0)}
+.js .cover h1 .ln>span{transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--dl,0s)}
+.js .cover.active h1 .ln>span{transform:none}
+.js .cover .t1,.js .cover .role,.js .cover .lab,.js .cover .meta,.js .cover .cue,.js .cover .ml,.js .cover .thint{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .cover .t1{transition-delay:.1s}
+.js .cover .role{transition-delay:.8s}
+.js .cover .lab{transition-delay:.95s}
+.js .cover .meta{transition-delay:1.1s}
+.js .cover .ml{transition-delay:.7s}
+.js .cover .cue,.js .cover .thint{transition-delay:2.2s}
+.js .cover.active .t1,.js .cover.active .role,.js .cover.active .lab,.js .cover.active .meta,.js .cover.active .cue,.js .cover.active .ml,.js .cover.active .thint{opacity:1;transform:none}
+.js .cover.active .thint.off{opacity:0}
+@keyframes fin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.js .tl .row.hit{animation:fin .45s ease both}
+
+/* ---------- responsive ---------- */
+
+/* ---------- New Look silhouette tag (no photo) ---------- */
+#tag{height:560px;filter:drop-shadow(0 28px 36px rgba(0,0,0,.5))}
+.tg-face{border-radius:0;box-shadow:none;clip-path:path('M130 14 Q170 34 210 14 C252 8 282 30 278 72 C272 150 244 196 244 248 C306 282 334 400 336 528 Q170 582 4 528 C6 400 34 282 96 248 C96 196 68 150 62 72 C58 30 88 8 130 14 Z')}
+#tag:focus-visible .tg-face{box-shadow:none}
+#tag:focus-visible .tg-st path{stroke:var(--peri);stroke-dasharray:none;stroke-width:3}
+.tg-st{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.tg-st path{fill:none;stroke:#c9b8a0;stroke-width:1.5;stroke-dasharray:4 3;transform-origin:170px 280px;transform:scale(.955)}
+.tg-eyelet{top:30px}
+.tg-string{height:61px}
+.tg-name{left:0;right:0;top:88px;text-align:center;font-size:50px;line-height:.9;letter-spacing:1px}
+.tg-deg{position:absolute;left:0;right:0;top:190px;text-align:center;font-family:var(--en);font-size:12px;letter-spacing:1.3px;color:#7a7a8e;text-transform:uppercase;white-space:nowrap}
+.tg-belt{position:absolute;left:96px;top:244px;width:148px;height:12px;background:linear-gradient(90deg,var(--pink),var(--peri));border-radius:2px}
+.tg-role{left:14px;right:14px;top:305px;text-align:center;font-size:13.5px;line-height:1.5;font-weight:500;color:#3a3a4e}
+.tg-role span{display:block;font-weight:500;color:#5a5a6e;font-size:13.5px;white-space:nowrap}
+.tg-con{position:absolute;left:30px;right:30px;top:287px;display:grid;gap:13px;text-align:center}
+.tg-con a,.tg-con div{display:block;color:var(--inkd);text-decoration:none;font-size:15px;font-weight:500;line-height:1.3}
+.tg-con small{display:block;font-family:var(--en);font-size:11.5px;letter-spacing:2.8px;margin-bottom:1px;color:#7a7a8e;font-weight:400;text-transform:uppercase}
+.tg-con a:hover{color:var(--pink)}
+.tg-hem{position:absolute;left:0;right:0;bottom:16px;text-align:center;font-family:var(--en);font-size:12px;letter-spacing:2.5px;color:#9a9aae;text-transform:uppercase}
+.tg-hem i{display:block;width:86px;height:6px;margin:0 auto 6px;background:linear-gradient(90deg,var(--pink),var(--peri));border-radius:3px}
+.tg-front .tg-hem{bottom:32px}.tg-front .tg-hem i{margin-bottom:0}
+.tg-woven{top:100px}
+.tg-quote{position:absolute;left:30px;right:30px;top:142px;text-align:center;font-family:var(--en);font-size:20px;letter-spacing:2.5px;color:var(--inkd);text-transform:uppercase;line-height:1.3}
+.tg-quote small{display:block;font-size:11.5px;letter-spacing:2px;color:#9a9aae;margin-top:6px}
+.tg-fields{position:absolute;left:0;right:0;top:356px;text-align:center;font-family:var(--en);font-size:21px;letter-spacing:2px;line-height:1.5;color:var(--inkd);text-transform:uppercase}
+@media print{#tag{display:none!important}}
+@media(max-width:1100px){
+ .cover .cw{grid-template-columns:minmax(0,1fr) 320px}
+ .menu li a{font-size:22px}
+ .bignum{display:none}
+}
+@media(max-width:860px){
+ :root{--gut:22px}
+ .cover{align-items:flex-start}
+ .cover .cw{grid-template-columns:1fr;padding:0 var(--gut) 80px;gap:0}
+ .cover .ct{grid-column:1;grid-row:2;padding-top:12px}
+ .cover .tagarea{grid-column:1;grid-row:1;align-self:auto;height:min(74vh,620px)}
+ .menu ul{grid-template-columns:1fr}
+ .thint{font-size:13px}
+ .cover .t1{font-size:14px;letter-spacing:3px}
+ .cover .meta{gap:14px 32px;margin-top:28px}
+ .menu li a{font-size:21px;padding:10px 0}
+ .band{height:auto;min-height:66px}
+ .band .bi{padding:12px var(--gut);gap:14px;flex-wrap:wrap}
+ .band .tag{font-size:15px}
+ .band .pg{display:none}
+ .band h2{white-space:normal}
+ .body{padding:24px var(--gut) 56px}
+ .tl .row{grid-template-columns:1fr;gap:4px;padding:14px 0}
+ .tl .row:before{display:none}
+ .tl .yr{font-size:24px;padding-top:0}
+ .tl .t{font-size:17px}
+ .tl .v{font-size:14.5px}
+ .grid2{grid-template-columns:1fr;gap:18px}
+ .panel{padding:20px 20px}
+ .panel h4{font-size:26px}
+ .panel p,.cl li{font-size:17px}
+ .cover .cue{display:none}
+ #hud{right:12px;bottom:12px;flex-wrap:wrap;justify-content:flex-end}
+ #hud button{font-size:14px;padding:6px 10px}
+ footer{padding:30px var(--gut) 90px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important}
+ .js .a,.js .cover .t1,.js .cover .role,.js .cover .lab,.js .cover .meta,.js .cover .cue,.js .cover .ml,.js .cover .thint{opacity:1;transform:none}
+ .js .band h2,.js .bignum{clip-path:none}
+ .js .band .tag{opacity:1;transform:none}
+ .js .band:after{width:100%}
+ .js .cover h1 .ln>span{transform:none}
+}
+@media print{
+ :root{--gut:6px;--ink:#fff;--ink2:#fff;--ink3:#F7F7F8;--fg:#141426;--mute:#5D5D5D;--line:#D6D6DE;--hot:#D1047C;--peri:#4B4ED0;--peri2:#4B4ED0;--beige:#8C6B4E;--rose:#FFB3DE}
+ html{scroll-behavior:auto}
+ body{background:#fff;color:#141426}
+ .cover{min-height:0;page-break-after:avoid;display:block}
+ .cover .cw{padding:24px var(--gut) 16px;grid-template-columns:1fr;gap:10px 24px;max-width:none;align-items:start}
+ .cover .tagarea,#tape,#tagwrap,.thint{display:none!important}
+ .menu{margin-top:18px}
+ .menu ul{grid-template-columns:1fr 1fr;column-gap:30px}
+ .cover .t1{font-size:16px;letter-spacing:4px;margin-bottom:10px}
+ .cover h1{font-size:72px}
+ .cover .role{font-size:19px;margin:14px 0 6px}
+ .cover .lab{font-size:15px}
+ .cover .meta{margin-top:16px;font-size:16px}
+ .cover .meta b{font-size:22px}
+ .copy{display:none}
+ .menu li a{font-size:16px;padding:6px 0}
+ .menu li a .no{font-size:13px}
+ .pw,.cue,#bar,#hud,#overview,#search,.bignum,.none{display:none!important}
+ .sec:last-of-type{min-height:0}
+ .band{position:static;height:64px;min-height:0;background:#A61C64;-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-after:avoid;margin-top:8px}
+ .band .bi{padding:0 18px;gap:16px;flex-wrap:nowrap}
+ .band h2{color:#fff;clip-path:none!important;font-size:34px;white-space:nowrap}
+ .band .tag{display:inline;font-size:16px}
+ .band .pg{display:block;font-size:16px}
+ .band .tag,.band .pg{color:#fff;opacity:1!important;transform:none!important}
+ .band:after{width:100%}
+ .tl .row{grid-template-columns:140px 1fr;gap:16px;padding:10px 0;page-break-inside:avoid}
+ .tl .row:before{display:none}
+ .tl .yr{font-size:24px;padding-top:2px}
+ .tl .t{font-size:15px}
+ .tl .v{font-size:13px}
+ .tl .au{font-size:13px}
+ .legend{font-size:12px;margin-bottom:-14px}
+ .sub{font-size:20px;margin-top:18px}
+ .sub2{font-size:15px}
+ .menu .subs{padding-left:30px}
+ .grid2{grid-template-columns:1fr 1fr;gap:16px}
+ .panel{padding:16px 18px;page-break-inside:avoid}
+ .panel h4{font-size:24px}
+ .panel p,.cl li{font-size:15px}
+ .cl li{padding:7px 0}
+ .a,.cover .t1,.cover .role,.cover .lab,.cover .meta,.cover .ml,.cover .cue{opacity:1!important;transform:none!important}
+ .cover h1 .ln>span{transform:none!important}
+ .body{padding:16px 0 28px}
+ footer{padding:20px 0}
+ footer .dl{display:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="search" role="search"><span class="sl">Search</span><input id="q" type="search" placeholder="Keyword or year — e.g. Baekje, jogakbo, 2018" autocomplete="off"><button type="button" id="sClear">Close · Esc</button></div>
+
+<header class="cover" id="top">
+  <div class="pw p1"><div class="orb o1"></div></div><div class="pw p2"><div class="orb o2"></div></div><div class="pw p3"><div class="orb o3"></div></div>
+  
+  <canvas id="tape" aria-hidden="true"></canvas>
+  <div id="tagwrap">
+    <div id="tag" aria-label="Kim Sohee hang tag. Drag to swing, click to flip." role="button">
+      <div class="tg-card" id="tgcard">
+        <div class="tg-face tg-front">
+          <svg class="tg-st" viewBox="0 0 340 560" aria-hidden="true"><path d="M130 14 Q170 34 210 14 C252 8 282 30 278 72 C272 150 244 196 244 248 C306 282 334 400 336 528 Q170 582 4 528 C6 400 34 282 96 248 C96 196 68 150 62 72 C58 30 88 8 130 14 Z"/></svg>
+          <div class="tg-eyelet"></div>
+          <div class="tg-name">Kim<br><em>Sohee</em></div>
+          <div class="tg-deg">Assistant Professor · Ph.D.</div>
+          <div class="tg-belt"></div>
+          <div class="tg-con">
+            <a href="mailto:sophiasapient@dima.ac.kr"><small>Email</small>sophiasapient@dima.ac.kr</a>
+            <div><small>Office</small>Design Center 100317</div>
+            <a href="tel:0316706818"><small>Phone</small>031-670-6818</a>
+            <a href="https://www.dima.ac.kr/?p=223" target="_blank" rel="noopener"><small>Affiliation</small>Department of Fashion Styling<br>DIMA ↗</a>
+          </div>
+          <div class="tg-hem"><i></i></div>
+        </div>
+        <div class="tg-face tg-back">
+          <svg class="tg-st" viewBox="0 0 340 560" aria-hidden="true"><path d="M130 14 Q170 34 210 14 C252 8 282 30 278 72 C272 150 244 196 244 248 C306 282 334 400 336 528 Q170 582 4 528 C6 400 34 282 96 248 C96 196 68 150 62 72 C58 30 88 8 130 14 Z"/></svg>
+          <div class="tg-eyelet"></div>
+          <div class="tg-woven"><i></i>DIMA · Fashion Styling<i></i></div>
+          <div class="tg-quote">Creativity<br>takes courage<small>— Henri Matisse</small></div>
+          <div class="tg-belt"></div>
+          <div class="tg-fields">K-Fashion Design<br>Digital &amp; AI Fashion<br>Fashion Aesthetics</div>
+          <div class="tg-hem"><i></i>Flip · Drag</div>
+        </div>
+      </div>
+      <div class="tg-string"></div>
+    </div>
+  </div>
+  <div class="thint" id="thint">Drag the tag · click to flip</div>
+  <div class="cw">
+    <div class="tagarea" id="tagarea" aria-hidden="true"></div>
+    <div class="ct">
+      <div class="t1">Dong-Ah Institute of Media and Arts</div>
+      <h1><span class="ln"><span style="--dl:.25s">Kim <em>Sohee</em></span></span></h1>
+      <p class="role">Ph.D. · Assistant Professor, <span class="nb">Department of Fashion Styling</span></p>
+      <div class="lab">K-Fashion Design · Digital &amp; AI Fashion · Fashion Aesthetics</div>
+      <div class="meta">
+        <div>Email<b class="lc"><a href="mailto:sophiasapient@dima.ac.kr">sophiasapient@dima.ac.kr</a><button type="button" class="copy" data-copy="sophiasapient@dima.ac.kr">Copy</button></b></div>
+        <div>Office<b>DESIGN CENTER 100317</b></div>
+      </div>
+      <nav class="menu" aria-label="Sections"><div class="ml">Index</div><ul><li class="a"><a class="m" href="#cv-education" data-i="0"><span class="no">01</span><span class="lb">Education</span></a></li><li class="a"><a class="m" href="#cv-experience" data-i="1"><span class="no">02</span><span class="lb">Professional Experience</span></a></li><li class="a"><a class="m" href="#cv-research" data-i="2"><span class="no">03</span><span class="lb">Research</span></a></li><li class="a"><a class="m" href="#cv-exhibitions" data-i="3"><span class="no">04</span><span class="lb">Exhibitions &amp; Projects</span></a></li><li class="a"><a class="m" href="#cv-courses" data-i="4"><span class="no">05</span><span class="lb">Courses Taught</span></a></li></ul></nav>
+    </div>
+  </div>
+  <div class="cue">Scroll · ← → sections · G index · / search</div>
+</header>
+<main>
+<section class="sec" id="cv-education" data-title="Education">
+  <div class="band"><div class="bi"><h2><em>Education</em></h2><span class="pg">01 / 05</span></div></div>
+  <div class="body"><div class="bignum" aria-hidden="true">01</div><div class="tl"><div class="row a"><div class="yr">2011 – 2015</div><div class="e"><p class="t">Ph.D. in Clothing &amp; Textiles</p><p class="v">Sookmyung Women’s University, Seoul, Korea</p></div></div><div class="row a"><div class="yr">2009 – 2011</div><div class="e"><p class="t">M.S. in Clothing &amp; Textiles</p><p class="v">Sookmyung Women’s University, Seoul, Korea</p></div></div><div class="row a"><div class="yr">1998 – 2002</div><div class="e"><p class="t">B.S. in Clothing &amp; Textiles</p><p class="v">Sookmyung Women’s University, Seoul, Korea</p></div></div></div><p class="none">No entries match.</p></div>
+</section>
+<section class="sec" id="cv-experience" data-title="Professional Experience">
+  <div class="band"><div class="bi"><h2>Professional <em>Experience</em></h2><span class="pg">02 / 05</span></div></div>
+  <div class="body"><div class="bignum" aria-hidden="true">02</div><div class="tl"><div class="row a"><div class="yr">2026 – Present</div><div class="e"><p class="t">Assistant Professor</p><p class="v">Department of Fashion Styling, Dong-Ah Institute of Media and Arts</p></div></div><div class="row a"><div class="yr">2012 – 2026</div><div class="e"><p class="t">Visiting Professor · Visiting Associate Professor · Lecturer</p><p class="v">Department of Clothing &amp; Textiles, Sookmyung Women’s University</p></div></div></div><div class="panel hot a about"><h4>About</h4><p>Kim Sohee currently teaches in the Department of Fashion Styling at Dong-Ah Institute of Media and Arts.<br>She previously taught at Sookmyung Women’s University and several other institutions.<br>Prior to her academic career, she worked as a fashion designer and operated her own fashion retail business.</p></div><p class="none">No entries match.</p></div>
+</section>
+<section class="sec" id="cv-research" data-title="Research">
+  <div class="band"><div class="bi"><h2><em>Research</em></h2><span class="pg">03 / 05</span></div></div>
+  <div class="body"><div class="bignum" aria-hidden="true">03</div><p class="legend a"><span class="cor">*</span> Corresponding / presenting author</p><div class="grp" id="cv-presentations"><h3 class="sub a">Conference Presentations</h3><h4 class="sub2 a">Domestic</h4><div class="tl"><div class="row a"><div class="yr">2026</div><div class="e"><p class="t">The aesthetics of <i>chogyeok</i> (超格) in contemporary K-fashion styling: Focusing on Cho Jihoon’s theory of <i>meot</i></p><p class="au"><b>Kim, S.</b></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2026</div><div class="e"><p class="t">Binary boundaries of digital fashion through Derrida’s deconstruction: Focusing on the displacement of original/copy, physical/virtual and worn/unworn</p><p class="au"><b>Kim, S.</b></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2026</div><div class="e"><p class="t">Digital fashion images through Baudrillard’s theory of simulacra: Focusing on the semiotic operation of fashion without the real</p><p class="au"><b>Kim, S.</b></p><p class="v">Korea Fashion and Costume Design Association, 1st Conference, Sejong University</p></div></div><div class="row a"><div class="yr">2023</div><div class="e"><p class="t">A study on Silk Road costume culture: Focusing on its relationship with ancient Korean dress</p><p class="au"><b>Kim, S.</b></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2021</div><div class="e"><p class="t">A study on the embroidery of the Cheonsuguk Mandala: Focusing on its connection with ancient Korean embroidery</p><p class="au">Lee, L.-S.<span class="cor">*</span>, <b>Kim, S.</b>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Online</p></div></div><div class="row a"><div class="yr">2021</div><div class="e"><p class="t">The correlation between the short-front, long-back skirt of the Joseon Dynasty and Korean modes of thought: Focusing on aesthetic characteristics</p><p class="au">Hwang, Y.-J.<span class="cor">*</span>, <b>Kim, S.</b>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Online</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">Sociocultural meanings of gyubang crafts in the late Joseon period</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Chung-Ang University</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">Korean modes of thought expressed in Korean traditional dress</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Chung-Ang University</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">The aesthetics of desire expressed in women’s dress of the late Joseon period</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Chung-Ang University</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">The meaning and expression of luxury in Korean traditional dress: Focusing on 17th–18th century Joseon society</p><p class="au">Chae, K.-S., <b>Kim, S.</b><span class="cor">*</span>, &amp; Yang, Y.-E.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Chung-Ang University <span class="aw">Best Paper Award</span></p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Ancient Korean gokkal and paper folding</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v">Korea Fashion and Costume Design Association, 2nd Conference, Hanyang University</p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Heaven, earth and human in Korean costume form: Symbolism of all creation through circle, square and triangle</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">A study on the process of change in Korean costume closures</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Korean imagery in contemporary Vietnamese fashion</p><p class="au">Nguyen, T. T. T., Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">The aesthetic value of desire expressed in Joseon women’s dress</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Strategies for the globalization of Korean traditional cultural products</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2016</div><div class="e"><p class="t">The correlation between ancient Korean dress and Scythian dress</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Yonsei University <span class="aw">Best Paper Award</span></p></div></div><div class="row a"><div class="yr">2015</div><div class="e"><p class="t">The fractal phenomenon in the formativeness of Korean traditional costume</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Incheon National University</p></div></div><div class="row a"><div class="yr">2014</div><div class="e"><p class="t">Development of a Korean fashion concept using Silla dress</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2013</div><div class="e"><p class="t">Uniform design development for Taekwondowon operating staff</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2012</div><div class="e"><p class="t">A study on the similarities between Goguryeo dress and Xianbei dress</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Seoul National University <span class="aw">Best Paper Award</span></p></div></div><div class="row a"><div class="yr">2012</div><div class="e"><p class="t">Research of the aesthetic consciousness in the Silla Dynasty</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Spring Conference, Seoul National University</p></div></div><div class="row a"><div class="yr">2011</div><div class="e"><p class="t">Conceptualizing Korean fashion with inspiration from the costume images of Shilla</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">Korean Society of Clothing and Textiles, Fall Conference, Yonsei University <span class="aw">Best Paper Award</span></p></div></div></div><h4 class="sub2 a">International</h4><div class="tl"><div class="row a"><div class="yr">2016</div><div class="e"><p class="t">Formative principles of Korean traditional costume configuration and the fractal geometry</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">International Textile and Apparel Association (ITAA) Annual Conference, Vancouver, Canada</p></div></div><div class="row a"><div class="yr">2014</div><div class="e"><p class="t">Korean patchwork wrapping cloth and modern abstract art</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">International Textile and Apparel Association (ITAA) Annual Conference, Charlotte, North Carolina, USA</p></div></div><div class="row a"><div class="yr">2012</div><div class="e"><p class="t">Study on the similarities of culture shown in the ancient relics of the East and the West</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v">International Textile and Apparel Association (ITAA) Annual Conference, Honolulu, Hawaii, USA</p></div></div></div></div><div class="grp" id="cv-publications"><h3 class="sub a">Publications</h3><div class="tl"><div class="row a"><div class="yr">2026</div><div class="e"><p class="t">The formative aesthetics of connection and division in Korean traditional jogakbo and Mondrian’s painting, and their structural resonance</p><p class="au"><b>Kim, S.</b></p><p class="v"><i>Journal of Basic Design &amp; Art</i>, 27(5), 65–85 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2024</div><div class="e"><p class="t">Sociocultural meaning and creative succession in gyubang crafts in Joseon Dynasty</p><p class="au"><b>Kim, S.</b></p><p class="v"><i>The Korea Journal of Donghak Studies</i>, 70, 303–337 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2023</div><div class="e"><p class="t">The connection between the Cheonsuguk Mandala embroidery insignia and ancient Korean embroidery</p><p class="au">Lee, L.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 47(6), 977–995 <span class="ix sc">SCOPUS</span></p></div></div><div class="row a"><div class="yr">2023</div><div class="e"><p class="t">A study of the style type and formative properties of short front and long back skirts in the early Joseon Dynasty</p><p class="au">Hwang, Y.-J., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 47(2), 215–231 <span class="ix sc">SCOPUS</span></p></div></div><div class="row a"><div class="yr">2022</div><div class="e"><p class="t">The meaning of desire in women’s costume in the late Joseon Dynasty</p><p class="au"><b>Kim, S.</b></p><p class="v"><i>Culture and Convergence</i>, 44(11), 767–780 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">A study on the changes and the aesthetic characteristics of Korean traditional clothing’s yeomim</p><p class="au"><b>Kim, S.</b></p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 42(6), 924–942 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">A study on Korean ancient conical hat (Kotgal) and the paper-folding</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v"><i>Journal of the Korea Fashion and Costume Design Association</i>, 20(4), 1–16 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">Highest value shown in Baekbun (face powder) advertisement texts from the 1920s to the 1930s: Focus on a transitional confrontation between traditional beauty and modern beauty</p><p class="au">Baek, J.-H., Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 42(3), 544–559 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t">Scythai’s clothing type and style: Focusing on the relationship with ancient Korea</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v"><i>Journal of the Korea Fashion and Costume Design Association</i>, 20(1), 61–77 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Research on reproduction for Baekje armor display: Focus on the lamellar armors of the Baekje Hanseong era</p><p class="au">Chae, K.-S., &amp; <b>Kim, S.</b><span class="cor">*</span></p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 41(2), 281–295 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2017</div><div class="e"><p class="t">Fashion and the Future</p><p class="v">Kyungchunsa</p></div></div><div class="row a"><div class="yr">2016</div><div class="e"><p class="t">The fractal phenomenon appeared in the formativeness of Korean traditional costume</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v"><i>Journal of the Korea Fashion and Costume Design Association</i>, 18(3), 165–181 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2015</div><div class="e"><p class="t">A comparative study on the style of clothing of Goguryeo and Xianbei tribe: Focused on Northern Wei period</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v"><i>Journal of the Korea Fashion and Costume Design Association</i>, 17(2), 63–78 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2015</div><div class="e"><p class="t">Conceptualizing Korean fashion with inspiration from traditional images: Focused on women’s costume in the Silla Dynasty</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 39(1), 91–105 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2013</div><div class="e"><p class="t">Research of the aesthetic consciousness in the Silla Dynasty</p><p class="au"><b>Kim, S.</b><span class="cor">*</span>, &amp; Chae, K.-S.</p><p class="v"><i>Journal of the Korean Society of Clothing and Textiles</i>, 37(4), 452–466 <span class="ix">KCI</span></p></div></div><div class="row a"><div class="yr">2013</div><div class="e"><p class="t">Baekje Ornaments of the Hanseong Period</p><p class="v">Seoul Baekje Museum</p></div></div><div class="row a"><div class="yr">2009</div><div class="e"><p class="t">A study on luxury branding of fashion design using Korean traditional beauty</p><p class="v"><i>Journal of the Korean Society of Fashion and Beauty</i>, 7(1), 45–53</p></div></div></div></div><p class="none">No entries match.</p></div>
+</section>
+<section class="sec" id="cv-exhibitions" data-title="Exhibitions &amp; Projects">
+  <div class="band"><div class="bi"><h2>Exhibitions &amp; <em>Projects</em></h2><span class="pg">04 / 05</span></div></div>
+  <div class="body"><div class="bignum" aria-hidden="true">04</div><div class="tl"><div class="row a"><div class="yr">2026</div><div class="e"><p class="t"><i>Sheer, Saturate, Sediment</i>, GIAF Invitation 2026 KSBDA Sejong Special Exhibition: Shaping the Future</p><p class="v">Sejong Museum of Art, Gallery 1, Sejong Center for the Performing Arts, Seoul</p></div></div><div class="row a"><div class="yr">2026</div><div class="e"><p class="t"><i>Concealing, Revealing</i>, 2026 KSBDA Indiana International Invitational Exhibition: Shared Foundations, Cross-Cultural Perspectives in Basic Design</p><p class="v">Purdue University, Indiana, USA</p></div></div><div class="row a"><div class="yr">2026</div><div class="e"><p class="t"><i>Surface, Shadow, Spectrum</i>, 2026 KSBDA Spring International Invitational Exhibition: Basic Design and Art at the Boundary of Human Touch and AI</p><p class="v">Seoul National University, Seoul</p></div></div><div class="row a"><div class="yr">2019</div><div class="e"><p class="t"><i>A Voice of the Past</i>, 2019 KSBDA Cairo International Conference &amp; Invitational Exhibition</p><p class="v">Cairo Opera House Gallery, Cairo, Egypt</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t"><i>Flat + Shape II</i></p><p class="v">Space Omae Gallery, Seoul</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t"><i>Coexistence</i>, 2018 KSBDA Fall International Conference &amp; Invitational Exhibition: Design &amp; Media</p><p class="v">Daejin University, Korea</p></div></div><div class="row a"><div class="yr">2018</div><div class="e"><p class="t"><i>Harmony of Squares</i>, 2018 KFCDA Annual International Invited Fashion Exhibition</p><p class="v">Gallery Iang, Seoul</p></div></div><div class="row a"><div class="yr">2013</div><div class="e"><p class="t"><i>Flat + Shape</i></p><p class="v">Yeoksam Culture Center, Seoul</p></div></div><div class="row a"><div class="yr">2012</div><div class="e"><p class="t"><i>Baekje’s Elegance: Costume and Ornament</i>, Seoul Baekje Museum Opening Special Exhibition</p><p class="v">Seoul Baekje Museum, Seoul</p></div></div><div class="row a"><div class="yr">2010</div><div class="e"><p class="t">Ulsan World Onggi Culture Expo Opening Fashion Show: <i>Onggi and Ancient Fantasy</i></p><p class="v">Ulsan Metropolitan City</p></div></div><div class="row a"><div class="yr">2010</div><div class="e"><p class="t">Great Baekje World Festival: Historical Costume Research, Baekje Culture Reproduction Complex</p><p class="v">Baekje Cultural Festival Committee</p></div></div><div class="row a"><div class="yr">2010</div><div class="e"><p class="t">JoongAng Ilbo Korean Design Project: <i>Reinterpreting the Sculptor Moon Shin</i></p><p class="v">JoongAng Ilbo</p></div></div></div><p class="none">No entries match.</p></div>
+</section>
+<section class="sec" id="cv-courses" data-title="Courses Taught">
+  <div class="band"><div class="bi"><h2>Courses <em>Taught</em></h2><span class="pg">05 / 05</span></div></div>
+  <div class="body"><div class="bignum" aria-hidden="true">05</div><div class="grid2"><div class="panel a"><h4>Spring Semester</h4><ol class="cl"><li class="a"><span class="n">01</span><span>3D CLO</span></li><li class="a"><span class="n">02</span><span>Career Design for Employment &amp; Entrepreneurship</span></li><li class="a"><span class="n">03</span><span>Collection Styling</span></li><li class="a"><span class="n">04</span><span>Contemporary Fashion Design</span></li><li class="a"><span class="n">05</span><span>Digital Flat Sketch</span></li></ol></div><div class="panel a"><h4>Fall Semester</h4><ol class="cl"><li class="a"><span class="n">01</span><span>AI-Based 3D Virtual Design</span></li><li class="a"><span class="n">02</span><span>AI-Based Digital Design</span></li><li class="a"><span class="n">03</span><span>Employment &amp; Entrepreneurship Coaching</span></li><li class="a"><span class="n">04</span><span>Fashion Styling</span></li><li class="a"><span class="n">05</span><span>Fashion Technology</span></li></ol></div></div><p class="none">No entries match.</p></div>
+</section></main>
+<footer><b>Kim Sohee</b> · Department of Fashion Styling · Dong-Ah Institute of Media and Arts<br><span class="m"><a href="mailto:sophiasapient@dima.ac.kr">sophiasapient@dima.ac.kr</a> · Office: Design Center 100317</span><br><a class="dl" href="https://www.dima.ac.kr/?p=223" target="_blank" rel="noopener">Department of Fashion Styling · DIMA ↗</a></footer>
+<div id="hud"><button type="button" id="bPrev" aria-label="Previous section">◀</button><button type="button" id="bNext" aria-label="Next section">▶</button><button type="button" id="bSearch">Search · /</button><button type="button" id="bGrid">Index · G</button><button type="button" id="bFull">Full · F</button><button type="button" id="bPrint">Print</button></div>
+<div id="overview" role="dialog" aria-label="Index"><h3>Index<small><button type="button" id="ovClose">Close · Esc</button></small></h3><div class="og"><div class="oi"><button type="button" class="main" data-i="0"><span class="no">01</span>Education</button></div><div class="oi"><button type="button" class="main" data-i="1"><span class="no">02</span>Professional Experience</button></div><div class="oi"><button type="button" class="main" data-i="2"><span class="no">03</span>Research</button></div><div class="oi"><button type="button" class="main" data-i="3"><span class="no">04</span>Exhibitions &amp; Projects</button></div><div class="oi"><button type="button" class="main" data-i="4"><span class="no">05</span>Courses Taught</button></div></div></div>
+<script>
+(function(){
+ var d=document,root=d.documentElement;
+ root.classList.add('js');
+ var cover=d.getElementById('top');
+ var secs=[].slice.call(d.querySelectorAll('.sec'));
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var hasIO='IntersectionObserver' in window && !reduce;
+
+ // sections: band wipe, tag slide, underline, big number
+ if(hasIO){
+   var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('active');io.unobserve(en.target);}});},{rootMargin:'0px 0px -18% 0px',threshold:0});
+   secs.forEach(function(s){io.observe(s);});
+ } else { secs.forEach(function(s){s.classList.add('active');}); }
+ setTimeout(function(){cover.classList.add('active');},80);
+
+ // rows, panels and menu items rise one by one as they enter the viewport
+ var items=[].slice.call(d.querySelectorAll('.a'));
+ if(hasIO){
+   var io2=new IntersectionObserver(function(es){
+     var i=0;
+     es.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;var base=(el.closest('.cover')&&performance.now()<2500)?1.0:0;el.style.setProperty('--dl',(base+Math.min(i*.11,1.2)).toFixed(2)+'s');el.classList.add('on');io2.unobserve(el);i++;});
+   },{rootMargin:'0px 0px -6% 0px',threshold:0});
+   items.forEach(function(el){io2.observe(el);});
+ } else { items.forEach(function(el){el.classList.add('on');}); }
+
+ // mouse parallax on the cover orbs
+ if(window.matchMedia('(pointer:fine)').matches && !reduce){
+   var pws=[['.p1',-22,-16],['.p2',14,10],['.p3',10,8]].map(function(a){return [d.querySelector(a[0]),a[1],a[2]];});
+   cover.addEventListener('pointermove',function(e){var r=cover.getBoundingClientRect();var dx=(e.clientX-r.left)/r.width-.5,dy=(e.clientY-r.top)/r.height-.5;pws.forEach(function(p){p[0].style.transform='translate('+(dx*p[1]).toFixed(1)+'px,'+(dy*p[2]).toFixed(1)+'px)';});});
+   cover.addEventListener('pointerleave',function(){pws.forEach(function(p){p[0].style.transform='';});});
+ }
+
+ // ---- hang tag on a tailor's tape (verlet rope on canvas + 3D card) ----
+ (function(){
+   var cv=d.getElementById('tape'),wrap=d.getElementById('tagwrap'),tag=d.getElementById('tag'),card=d.getElementById('tgcard'),hint=d.getElementById('thint'),area=d.getElementById('tagarea');
+   if(!cv||!cv.getContext)return;
+   var ctx=cv.getContext('2d');
+   var W=0,H=0,S=1,mobile=false,TAG_H=560,GAP=33;
+   var N=24,ITER=24,pts=[],seg=0,ropeLen=0,anchor={x:0,y:-30},grav=0.55,damp=0.985;
+   var drag=false,px=0,py=0,flipped=false,flipping=false,moved=0,downT=0,offx=0,offy=0,hist=[],visible=true,running=false;
+   function layout(){
+     var r=cover.getBoundingClientRect(),a=area.getBoundingClientRect();
+     W=cover.clientWidth;H=cover.clientHeight;
+     var dpr=Math.min(2,window.devicePixelRatio||1);cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+     mobile=window.innerWidth<=860;
+     S=window.innerWidth<700?0.8:(window.innerWidth<=1100||window.innerHeight<760?0.9:1)*0.85;
+     tag.style.top=(15-45*S)+'px';
+     anchor.x=a.left-r.left+a.width/2;anchor.y=-30;
+     var room=mobile?(a.height):Math.min(window.innerHeight,H);
+     var len=mobile?Math.max(120,room-TAG_H*S-GAP-50):Math.max(150,Math.min(460,room*0.42,room-TAG_H*S-GAP-130));
+     ropeLen=len;seg=len/(N-1);
+     pts=[];for(var i=0;i<N;i++){var y=anchor.y+i*seg;pts.push({x:anchor.x,y:y,ox:anchor.x,oy:y});}
+     pts[N-1].x+=1;
+     flipped=false;flipping=false;card.style.transition='none';card.style.transform='rotateY(0deg)';
+     hint.style.left=Math.round(anchor.x-hint.offsetWidth/2)+'px';
+     hint.style.top=Math.round(anchor.y+len+GAP+15+(TAG_H-29)*S+22)+'px';   // just under the tag at rest
+   }
+   function step(){
+     var t=performance.now();
+     for(var i=1;i<N;i++){var p=pts[i];var vx=(p.x-p.ox)*damp,vy=(p.y-p.oy)*damp;p.ox=p.x;p.oy=p.y;p.x+=vx;p.y+=vy+grav*(i===N-1?2.2:1);
+       if(!drag&&!reduce&&i===N-1){p.x+=Math.sin(t/1500)*0.16;}}
+     if(drag){var e=pts[N-1];e.ox=e.x;e.oy=e.y;var ddx=px-anchor.x,ddy=py-anchor.y,dd=Math.hypot(ddx,ddy),mx=ropeLen*0.98;if(dd>mx){ddx*=mx/dd;ddy*=mx/dd;}e.x=anchor.x+ddx;e.y=anchor.y+ddy;}
+     for(var k=0;k<ITER;k++){pts[0].x=anchor.x;pts[0].y=anchor.y;
+       for(var j=0;j<N-1;j++){var a=pts[j],b=pts[j+1];var dx=b.x-a.x,dy=b.y-a.y,dist=Math.hypot(dx,dy)||0.0001,diff=(dist-seg)/dist*0.5;
+         var wa=j===0?0:1,wb=(j+1===N-1&&drag)?0:1;var s=wa+wb||1;
+         a.x+=dx*diff*(wa/s);a.y+=dy*diff*(wa/s);b.x-=dx*diff*(wb/s);b.y-=dy*diff*(wb/s);}
+       var e2=pts[N-1];if(e2.y<10)e2.y=10;}
+   }
+   function path(P){ctx.beginPath();ctx.moveTo(P[0].x,P[0].y);for(var i=1;i<P.length-1;i++){var xc=(P[i].x+P[i+1].x)/2,yc=(P[i].y+P[i+1].y)/2;ctx.quadraticCurveTo(P[i].x,P[i].y,xc,yc);}ctx.lineTo(P[P.length-1].x,P[P.length-1].y);}
+   function rr(x,y,w,h,r){ctx.beginPath();if(ctx.roundRect){ctx.roundRect(x,y,w,h,r);}else{ctx.rect(x,y,w,h);}}
+   function draw(){
+     ctx.clearRect(0,0,W,H);var P=pts;
+     ctx.save();ctx.lineCap='butt';ctx.lineJoin='round';
+     path(P);ctx.strokeStyle='rgba(0,0,0,.35)';ctx.lineWidth=26;ctx.stroke();
+     path(P);ctx.strokeStyle='#F3EFE2';ctx.lineWidth=22;ctx.stroke();
+     path(P);ctx.strokeStyle='#D1047C';ctx.lineWidth=2;ctx.stroke();
+     var acc=0,n=0;
+     for(var i=0;i<P.length-1;i++){var a=P[i],b=P[i+1];var dx=b.x-a.x,dy=b.y-a.y,L=Math.hypot(dx,dy);var ux=dx/L,uy=dy/L,nx=-uy,ny=ux;
+       var t=0;while(acc+(L-t)>=6){var need=6-acc;t+=need;acc=0;var x=a.x+ux*t,y=a.y+uy*t;n++;var len=(n%10===0)?8:(n%5===0?6:3.5);
+         ctx.beginPath();ctx.moveTo(x+nx*3,y+ny*3);ctx.lineTo(x+nx*(3+len),y+ny*(3+len));ctx.strokeStyle='#1A1A2E';ctx.lineWidth=1.1;ctx.stroke();
+         if(n%10===0){ctx.save();ctx.translate(x-nx*7,y-ny*7);ctx.rotate(Math.atan2(uy,ux)+Math.PI/2);ctx.fillStyle='#1A1A2E';ctx.font='9px "Bebas Neue","Arial Narrow",sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(String(n/10),0,0);ctx.restore();}
+       } acc+=(L-t);}
+     var e=P[N-1],pe=P[N-2];var ang=Math.atan2(e.y-pe.y,e.x-pe.x);var cx=Math.cos(ang),cy=Math.sin(ang);
+     ctx.strokeStyle='#E9E6F6';ctx.lineWidth=3;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(e.x+cx*4,e.y+cy*4);ctx.lineTo(e.x+cx*(GAP+15),e.y+cy*(GAP+15));ctx.stroke();
+     ctx.save();ctx.translate(e.x,e.y);ctx.rotate(ang-Math.PI/2);
+     var g=ctx.createLinearGradient(-12,0,12,0);g.addColorStop(0,'#8E6F55');g.addColorStop(.5,'#E8CDB2');g.addColorStop(1,'#8E6F55');
+     ctx.fillStyle=g;rr(-12,-16,24,22,3);ctx.fill();ctx.fillStyle='rgba(0,0,0,.22)';rr(-12,-16,24,3,1);ctx.fill();
+     ctx.restore();ctx.restore();
+     var tx=e.x+cx*GAP,ty=e.y+cy*GAP;var vx=e.x-e.ox;var tilt=Math.max(-18,Math.min(18,vx*2.2));
+     wrap.style.transform='translate3d('+tx.toFixed(2)+'px,'+ty.toFixed(2)+'px,0) rotate('+((ang-Math.PI/2)*180/Math.PI).toFixed(2)+'deg)';
+     tag.style.transform='scale('+S+') rotateX('+(-tilt*0.15).toFixed(2)+'deg)';
+     if(!flipping){card.style.transform='rotateY('+((flipped?180:0)+tilt*0.6).toFixed(2)+'deg)';}
+   }
+   function loop(){if(!visible||d.hidden){running=false;return;}step();draw();requestAnimationFrame(loop);}
+   function run(){if(!running){running=true;requestAnimationFrame(loop);}}
+   function local(ev){var r=cover.getBoundingClientRect();return {x:ev.clientX-r.left,y:ev.clientY-r.top};}
+   tag.addEventListener('pointerdown',function(ev){if(ev.target.closest('a'))return;ev.preventDefault();tag.setPointerCapture(ev.pointerId);drag=true;moved=0;downT=performance.now();var p=local(ev),e=pts[N-1];offx=e.x-p.x;offy=e.y-p.y;px=e.x;py=e.y;hist=[{t:downT,x:px,y:py}];tag.classList.add('grab');hint.classList.add('off');run();});
+   tag.addEventListener('pointermove',function(ev){if(!drag)return;var p=local(ev),nx=p.x+offx,ny=p.y+offy;moved+=Math.hypot(nx-px,ny-py);px=nx;py=ny;var t=performance.now();hist.push({t:t,x:nx,y:ny});while(hist.length>2&&t-hist[0].t>90)hist.shift();});
+   function release(){if(!drag)return;drag=false;tag.classList.remove('grab');
+     var t=performance.now(),h0=hist[0],h1=hist[hist.length-1],dt=Math.max(1,h1.t-h0.t);
+     var vx=(t-h1.t>120)?0:(h1.x-h0.x)/dt,vy=(t-h1.t>120)?0:(h1.y-h0.y)/dt;
+     var e=pts[N-1],k=Math.min(1,20/Math.max(1,Math.hypot(vx,vy)*16));e.ox=e.x-vx*16*k;e.oy=e.y-vy*16*k;
+     if(moved<6&&t-downT<300){flip();}else if(Math.abs(vx)>0.7){flip();}
+     hist=[];}
+   tag.addEventListener('pointerup',release);tag.addEventListener('pointercancel',release);
+   function flip(){flipped=!flipped;flipping=true;card.style.transition=reduce?'none':'transform .9s cubic-bezier(.3,.9,.3,1)';card.style.transform='rotateY('+(flipped?180:0)+'deg)';setTimeout(function(){flipping=false;card.style.transition='none';},reduce?0:900);}
+   tag.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+   tag.tabIndex=0;
+   if(window.matchMedia('(hover: none)').matches){hint.textContent='Drag the tag · tap to flip';}
+   layout();
+   for(var i=0;i<N;i++){pts[i].y-=140;pts[i].oy=pts[i].y;}   // drop in from a little above
+   if(reduce){for(var r=0;r<160;r++)step();}
+   if('ResizeObserver' in window){var lastW=W,lastH=H;new ResizeObserver(function(){if(cover.clientWidth!==lastW||Math.abs(cover.clientHeight-lastH)>40){lastW=cover.clientWidth;lastH=cover.clientHeight;layout();draw();}}).observe(cover);}
+   else{window.addEventListener('resize',function(){layout();draw();});}
+   if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible)run();},{threshold:0}).observe(cover);}
+   d.addEventListener('visibilitychange',function(){if(!d.hidden)run();});
+   run();
+ })();
+
+ // copy e-mail
+ d.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();var t=b.dataset.copy;var done=function(){var o=b.textContent;b.textContent='Copied';setTimeout(function(){b.textContent=o;},1400);};
+   var fallback=function(){var ta=d.createElement('textarea');ta.value=t;d.body.appendChild(ta);ta.select();try{d.execCommand('copy');done();}catch(_){}ta.remove();};
+   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}else fallback();});});
+
+ // progress bar + current section
+ var bar=d.getElementById('bar'),ov=d.querySelectorAll('#overview .oi');
+ var cur=-1,ticking=false;
+ function update(){
+   ticking=false;
+   var h=root.scrollHeight-window.innerHeight;bar.style.width=(h>0?Math.min(100,window.scrollY/h*100):0)+'%';
+   var line=window.scrollY+window.innerHeight*0.35,c=-1;
+   for(var i=0;i<secs.length;i++){if(secs[i].offsetTop<=line)c=i;}
+   if(c!==cur){cur=c;ov.forEach(function(b,i){b.classList.toggle('cur',i===c);});}
+ }
+ window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+ window.addEventListener('resize',update);update();
+
+ // navigation
+ function go(i){i=Math.max(-1,Math.min(secs.length-1,i));var el=i<0?cover:secs[i];window.scrollTo({top:el.offsetTop,behavior:reduce?'auto':'smooth'});}
+ var grid=d.getElementById('overview');
+ function toggleGrid(on){if(on===undefined)on=!grid.classList.contains('on');grid.classList.toggle('on',on);if(on){closeSearch(false);var b=grid.querySelector('.oi.cur .main')||grid.querySelector('.oi .main');if(b)b.focus();}}
+ function goA(id){var el=d.getElementById(id);if(!el)return;var band=el.closest('.sec').querySelector('.band');var y=el.getBoundingClientRect().top+window.scrollY-((band?band.offsetHeight:92)+18);window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});}
+ d.querySelectorAll('#overview .main').forEach(function(b){b.addEventListener('click',function(){toggleGrid(false);go(+b.dataset.i);});});
+ d.querySelectorAll('#overview [data-a]').forEach(function(b){b.addEventListener('click',function(){toggleGrid(false);goA(b.dataset.a);});});
+ d.querySelectorAll('.menu a.m').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();go(+a.dataset.i);});});
+ d.querySelectorAll('.menu a[data-a]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();goA(a.dataset.a);});});
+ d.getElementById('ovClose').addEventListener('click',function(){toggleGrid(false);});
+ d.getElementById('bPrev').addEventListener('click',function(){go(cur-1);});
+ d.getElementById('bNext').addEventListener('click',function(){go(cur+1);});
+ d.getElementById('bGrid').addEventListener('click',function(){toggleGrid();});
+ d.getElementById('bPrint').addEventListener('click',function(){window.print();});
+ function fullscreen(){try{var fe=d.fullscreenElement||d.webkitFullscreenElement;if(fe){(d.exitFullscreen||d.webkitExitFullscreen).call(d);}else{var el=root;(el.requestFullscreen||el.webkitRequestFullscreen).call(el);}}catch(err){}}
+ d.getElementById('bFull').addEventListener('click',fullscreen);
+ if(!(root.requestFullscreen||root.webkitRequestFullscreen))d.getElementById('bFull').style.display='none';
+
+ // search / filter
+ var sb=d.getElementById('search'),si=d.getElementById('q');
+ var rows=[].slice.call(d.querySelectorAll('.tl .row, .cl li'));
+ rows.forEach(function(r){r.dataset.s=(r.textContent||'').toLowerCase().replace(/\s+/g,' ');});
+ function filter(){
+   var q=si.value.trim().toLowerCase();
+   rows.forEach(function(r){var hit=!q||r.dataset.s.indexOf(q)>-1;r.classList.toggle('off',!hit);r.classList.remove('hit');if(hit&&q){void r.offsetWidth;r.classList.add('hit');}});
+   d.querySelectorAll('.sub2').forEach(function(h){var tl=h.nextElementSibling;var any=tl&&tl.querySelector('.row:not(.off)');h.classList.toggle('off',!!q&&!any);});
+   d.querySelectorAll('.grp').forEach(function(g){var any=g.querySelector('.row:not(.off)');g.classList.toggle('off',!!q&&!any);});
+   secs.forEach(function(s){var list=s.querySelectorAll('.tl .row, .cl li');if(!list.length)return;var any=s.querySelector('.tl .row:not(.off), .cl li:not(.off)');s.classList.toggle('empty',!!q&&!any);s.querySelectorAll('.panel.about').forEach(function(p){p.classList.toggle('off',!!q);});});
+   update();
+ }
+ function openSearch(){sb.classList.add('on');setTimeout(function(){si.focus();},60);}
+ function closeSearch(clear){if(clear!==false){si.value='';filter();}sb.classList.remove('on');si.blur();}
+ si.addEventListener('input',filter);
+ d.getElementById('sClear').addEventListener('click',function(){closeSearch(true);});
+ d.getElementById('bSearch').addEventListener('click',function(){sb.classList.contains('on')?closeSearch(true):openSearch();});
+
+ d.addEventListener('keydown',function(e){
+   if(e.metaKey||e.ctrlKey||e.altKey)return;
+   var k=e.key,typing=e.target===si;
+   if(k==='Escape'){if(typing||sb.classList.contains('on')){closeSearch(true);}toggleGrid(false);return;}
+   if(typing)return;
+   if(k==='/'){e.preventDefault();openSearch();return;}
+   if(k==='g'||k==='G'){e.preventDefault();toggleGrid();return;}
+   if(grid.classList.contains('on'))return;
+   if(k==='ArrowRight'){e.preventDefault();go(cur+1);}
+   else if(k==='ArrowLeft'){e.preventDefault();go(cur-1);}
+   else if(k==='Home'){e.preventDefault();go(-1);}
+   else if(k==='End'){e.preventDefault();go(secs.length-1);}
+   else if(k==='p'||k==='P'){e.preventDefault();window.print();}
+   else if(k==='f'||k==='F'){e.preventDefault();fullscreen();}
+ });
+})();
+</script>
+</body>
+</html>
